@@ -12,18 +12,15 @@ This software depends on:
 
 
 MOVEMENT:
-You can move with w,a,s,d
-Holding SHIFT will make you move faster
-If you press SPACE, your mouse will be tracked and you can look around
+You can move with w,a,s,d. Holding SHIFT will make you move faster.
+If you press SPACE, your mouse will be tracked and you can look around.
 Pressing SPACE again releases the mouse
 
 Feel free to play with fragment.glsl and vertex.glsl:
 The core of the raytracer is in fragment.glsl.
 However there are some properties that can be changed in vertex.glsl (eg camera field of view)
 
-TIP:
-Change the scene in fragment.glsl by commenting out the current sphere and light set and uncommenting an other set
-(Or even create your own scene)
-
+TIP: Change the scene in fragment.glsl by commenting out the current sphere and
+light set and uncommenting an other set. (Or even create your own scene)
 
 You can resize the window but remember: higher resolutions will decrease performance
