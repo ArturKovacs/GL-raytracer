@@ -1,16 +1,16 @@
 
 #define GLM_FORCE_RADIANS 1
 
-#include <SDL.h>
 #include <GL/glew.h>
-#include <SDL_opengl.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_opengl.h>
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <GL/GLU.h>
+#include <GL/glu.h>
 
 #define GLDEBUG std::cout << (__FILE__) << " at " << (__LINE__) << " : " << gluErrorString(glGetError()) << std::endl;
 
@@ -52,14 +52,13 @@ public:
 	const char* get_message()const {return m.c_str();}
 };
 
-//camera
 struct camera
 {
 	glm::vec3 pos;
 	float rotx;
 	float roty;
 };
-camera cameraTransform = {glm::vec3(0, 32, 50), -0.3, 0};
+camera cameraTransform = {glm::vec3(0, 32, 50), -0.3f, 0};
 //camera cameraTransform = {glm::vec3(14, 7, 9), -0.1, PI-0.1};
 
 bool mouseControllEnabled = SDL_FALSE;
@@ -75,10 +74,11 @@ SDL_GLContext GLcontext;
 GLuint fragmentShaderID = 0;
 GLuint vertexShaderID = 0;
 GLuint programID = 0;
-GLint cameraTransformID = -1;
-GLint time = -1;
-GLint NDCpos = -1;
-GLint vertexWorldPos = -1;
+//sh stands for shader. It means that these are variables located in shader programs
+GLint sh_cameraTransform = -1;
+GLint sh_time = -1;
+GLint sh_NDCpos = -1;
+GLint sh_vertexWorldPos = -1;
 GLuint VBO = 0;
 GLuint IBO = 0;
 
@@ -103,27 +103,27 @@ void GenerateVertexData(GLfloat outputData[vertexDataSize])
 
 	if(curr_screen_width > curr_screen_height)
 	{
-		float ratio = (float)curr_screen_width / curr_screen_height;
+		float ratio = float(curr_screen_width) / curr_screen_height;
 		for(int i = 0; i < vertexDataSize; i+=4)
 		{
 			vertexData[i+2] = vertexData[i] * ratio;
-			i++;
+			i+=1;
 			vertexData[i+2] = vertexData[i];
 		}
 	}
 	else
 	{
-		float ratio = (float)curr_screen_height / curr_screen_width;
+		float ratio = float(curr_screen_height) / curr_screen_width;
 		for(int i = 0; i < vertexDataSize; i+=4)
 		{
 			vertexData[i+2] = vertexData[i];
-			i++;
+			i+=1;
 			vertexData[i+2] = vertexData[i] * ratio;
 		}
 	}
 
 	//copy created data to the output
-	for(int i = 0; i < vertexDataSize; i++)
+	for(int i = 0; i < vertexDataSize; i+=1)
 	{
 		outputData[i] = vertexData[i];
 	}
@@ -141,7 +141,7 @@ void Init()
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
-	window = SDL_CreateWindow("GL Raytracer", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, INIT_WINDOW_WIDTH, INIT_WINDOW_HEIGHT, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN);
+	window = SDL_CreateWindow("GL raytracer", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, INIT_WINDOW_WIDTH, INIT_WINDOW_HEIGHT, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_SHOWN);
 	if(NULL == window)
 	{
 		throw custom_exception((std::string("Can not create window: ") + SDL_GetError()));
@@ -206,7 +206,7 @@ void Init()
 	const char* fragment_shader_filename = "fragment.glsl";
 	if(!loadStringFromFile(fragment_shader_filename, fragmentShaderSource))
 	{
-		throw custom_exception(std::string("Can not load file") + fragment_shader_filename);
+		throw custom_exception(std::string("Can not load file: ") + fragment_shader_filename);
 	}
 
 	fragmentShaderToFunction[0] = fragmentShaderSource.c_str();
@@ -234,26 +234,26 @@ void Init()
 		throw custom_exception(std::string("Error while linking program:\n") + log);
 	}
 
-	time = glGetUniformLocation(programID, "time");
-	if(-1 == time)
+	sh_time = glGetUniformLocation(programID, "time");
+	if(-1 == sh_time)
 	{
 		throw custom_exception("Can not get uniform location for \"time\"");
 	}
 
-	cameraTransformID = glGetUniformLocation(programID, "cameraTransform");
-	if(-1 == cameraTransformID)
+	sh_cameraTransform = glGetUniformLocation(programID, "cameraTransform");
+	if(-1 == sh_cameraTransform)
 	{
 		throw custom_exception("Can not get uniform location for \"cameraTransform\"");
 	}
 
-	NDCpos = glGetAttribLocation(programID, "NDCpos");
-	if(-1 == NDCpos)
+	sh_NDCpos = glGetAttribLocation(programID, "NDCpos");
+	if(-1 == sh_NDCpos)
 	{
 		throw custom_exception("Can not get attribute location for \"NDCpos\"");
 	}
 
-	vertexWorldPos = glGetAttribLocation(programID, "VertexWorldPos");
-	if(-1 == vertexWorldPos)
+	sh_vertexWorldPos = glGetAttribLocation(programID, "VertexWorldPos");
+	if(-1 == sh_vertexWorldPos)
 	{
 		throw custom_exception("Can not get attribute location for \"VertexWorldPos\"");
 	}
@@ -333,8 +333,8 @@ void handleMouseMotion(const SDL_MouseMotionEvent& motion)
 {
 	if(mouseControllEnabled)
 	{
-		cameraTransform.roty -= motion.xrel/150.f;
-		cameraTransform.rotx -= motion.yrel/150.f;
+		cameraTransform.roty -= motion.xrel/200.f;
+		cameraTransform.rotx -= motion.yrel/200.f;
 
 		cameraTransform.rotx = glm::min(glm::max(cameraTransform.rotx, -PI/2.0f), PI/2.0f);
 	}
@@ -364,8 +364,8 @@ void update()
 
 
 	glUseProgram( programID );
-	glUniform1f(time, currTime);
-	glUniformMatrix4fv(cameraTransformID, 1, GL_FALSE, glm::value_ptr(camMatrix));
+	glUniform1f(sh_time, currTime);
+	glUniformMatrix4fv(sh_cameraTransform, 1, GL_FALSE, glm::value_ptr(camMatrix));
 	glUseProgram( NULL );
 }
 
@@ -373,18 +373,18 @@ void render()
 {	
 	glUseProgram(programID);
 
-	glEnableVertexAttribArray(NDCpos);
-	glEnableVertexAttribArray(vertexWorldPos);
+	glEnableVertexAttribArray(sh_NDCpos);
+	glEnableVertexAttribArray(sh_vertexWorldPos);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glVertexAttribPointer(NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
-	glVertexAttribPointer(vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
+	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
+	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_INT, NULL);
 
-	glDisableVertexAttribArray(vertexWorldPos);
-	glDisableVertexAttribArray(NDCpos);
+	glDisableVertexAttribArray(sh_vertexWorldPos);
+	glDisableVertexAttribArray(sh_NDCpos);
 
 	glUseProgram(NULL);
 }
