@@ -78,7 +78,6 @@ struct light
 //Glass chair
 /*
 sphere Spheres[] = sphere[](
-    sphere(vec3(50*cos(time*0.5), 20, -50*sin(time*0.5)), 20, MAT_CRAZY, vec3(1), vec3(0), vec3(0.9)),
     sphere(vec3(0, 0, 0), 300, MAT_DIFFUSE, vec3(0.2, 0.3, 0.9), vec3(0), vec3(0.9)),
     sphere(vec3(20*cos(time), 10, 20*sin(time)), 10, MAT_CHECKER, vec3(0.3, 0.8, 0.4), vec3(0), vec3(0.9)),
     sphere(vec3(20*cos(time+PI), 10, 20*sin(time+PI)), 10, MAT_CHECKER, vec3(0.9, 0.2, 0.2), vec3(0), vec3(0.9))
@@ -111,11 +110,11 @@ sphere Spheres[] = sphere[](
 box Boxes[] = box[](
     //box(vec3(-8, 0, -7), vec3(-2, 6, -1), MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.9, 0.95, 0.94)),
     //box(vec3(4, 0, -14), vec3(12, 8, -6), MAT_DIFFUSE, vec3(0.8, 0.1, 0.3), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-    box(vec3(-35, 0, -70), vec3(35, 50, 70), MAT_REFLECTIVE, vec3(0.1), vec3(0), vec3(0.8))
+    box(vec3(-35, 0, -70), vec3(35, 50, 70), MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1), vec3(0), vec3(0.8))
 );
 
 light Lights[1] = light[1](
-    light(vec3(9.0, 18.0, -8.0), vec3(1.2, 1.2, 1.2))
+    light(vec3(9.0, 18.0, -8.0), vec3(1.1))
 );
 */
 
