@@ -52,6 +52,11 @@ public:
 	const char* get_message()const {return m.c_str();}
 };
 
+void custom_warning(const char* message)
+{
+	std::cout << "Warning: " << message << std::endl;
+}
+
 struct camera
 {
 	glm::vec3 pos;
@@ -237,7 +242,7 @@ void Init()
 	sh_time = glGetUniformLocation(programID, "time");
 	if(-1 == sh_time)
 	{
-		throw custom_exception("Can not get uniform location for \"time\"");
+		custom_warning("Can not get uniform location for \"time\"");
 	}
 
 	sh_cameraTransform = glGetUniformLocation(programID, "cameraTransform");
