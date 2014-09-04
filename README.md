@@ -25,6 +25,6 @@ light set and uncommenting an other set. (Or even create your own scene!)
 
 You can resize the window but remember: higher resolutions will decrease performance!
 
-If you want a better performace: (in fragment.glsl) it is recommended to set ENABLE_SHADOWS to 0,
-and to set maxReflectionCount to a lower value. Also the scene strongly effects performance
+If you want a better performace: (in fragment.glsl) it is recommended to set "ENABLE_SHADOWS" to 0,
+and to set "maxLightBounces" to a lower value. Also the scene strongly effects performance
 (number of objects, number of reflective and refractive objects).

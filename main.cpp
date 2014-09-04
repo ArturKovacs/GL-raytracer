@@ -66,6 +66,8 @@ struct camera
 camera cameraTransform = {glm::vec3(0, 32, 50), -0.3f, 0};
 //camera cameraTransform = {glm::vec3(14, 7, 9), -0.1, PI-0.1};
 
+const float mouseSensitivity = 0.0035f;
+
 bool mouseControllEnabled = SDL_FALSE;
 float movementSpeed = 10.f;
 short forwardMovement = 0;
@@ -338,8 +340,8 @@ void handleMouseMotion(const SDL_MouseMotionEvent& motion)
 {
 	if(mouseControllEnabled)
 	{
-		cameraTransform.roty -= motion.xrel/200.f;
-		cameraTransform.rotx -= motion.yrel/200.f;
+		cameraTransform.roty -= motion.xrel * mouseSensitivity;
+		cameraTransform.rotx -= motion.yrel * mouseSensitivity;
 
 		cameraTransform.rotx = glm::min(glm::max(cameraTransform.rotx, -PI/2.0f), PI/2.0f);
 	}

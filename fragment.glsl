@@ -1,5 +1,17 @@
 #version 130
 
+//turn shadows on/off (effects performance quite well)
+#define ENABLE_SHADOWS 1
+
+//turn a realistic drunkenness vision on/off
+#define DRUNK 0
+
+//index of refraction
+const float IOR_NUM = 1.52f;
+
+const float MAX_DISTANCE = 600.0f;
+
+//Shader input, output
 in vec3 rayDirFromVer;
 in vec3 eyePos;
 out vec4 outputColor;
@@ -19,18 +31,8 @@ uniform float time;
 #define OBJ_SPHERE  0
 #define OBJ_BOX     1
 
-//turn shadows on/off (effects performance quite well)
-#define ENABLE_SHADOWS  1
-
-#define DRUNK           0
-
 const float EPS = 0.006f;
 const float PI = 3.14159f;
-
-//index of refraction
-const float IOR_NUM = 1.52f;
-
-const float MAX_DISTANCE = 600.0f;
 
 vec3 custom_transform(vec3 seed)
 {
@@ -97,7 +99,7 @@ box Boxes[] = box[](
 light Lights[1] = light[1](
     light(vec3(0, 100.0, 0), vec3(1.2))
 );
-*/
+//*/
 
 //Mirror room
 /*
@@ -116,15 +118,15 @@ box Boxes[] = box[](
 light Lights[1] = light[1](
     light(vec3(9.0, 18.0, -8.0), vec3(1.1))
 );
-*/
+//*/
 
 //Box
-/*
+//*
 sphere Spheres[] = sphere[](
     sphere(vec3(-20, 8, 10), 8, MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.8, 0.8, 1.0)),
     sphere(vec3(10, 16, 5), 5, MAT_DIFFUSE, vec3(0.3, 0.9, 0.2), vec3(0.95), vec3(0.8, 0.8, 1.0)),
-    sphere(vec3(-12, 16, -10), 10, MAT_REFRACT, vec3(0.0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-    sphere(vec3(15, 11, -32), 11, MAT_REFLECTIVE, vec3(0.0), vec3(0.95), vec3(0.9))
+    sphere(vec3(-12, 16, -10), 10, MAT_REFRACT | MAT_SPECULAR, vec3(0.0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
+    sphere(vec3(15, 11, -32), 11, MAT_REFLECTIVE | MAT_SPECULAR, vec3(0.0), vec3(0.95), vec3(0.9))
 );
 
 box Boxes[] = box[](
@@ -136,10 +138,10 @@ box Boxes[] = box[](
 light Lights[1] = light[1](
     light(vec3(0.0, 45, 10.0), vec3(1.2, 1.2, 1.2))
 );
-*/
+//*/
 
 //Snowman
-
+/*
 sphere Spheres[] = sphere[](
     sphere(vec3(0, 6, 0), 6.0, MAT_DIFFUSE, vec3(1), vec3(0), vec3(0.9)),
     sphere(vec3(0, 15, 0), 4.2, MAT_DIFFUSE, vec3(1), vec3(0), vec3(0.9)),
@@ -154,7 +156,7 @@ box Boxes[] = box[](
 light Lights[] = light[](
     light(vec3(40, 40, 40), vec3(0.7, 0.85, 1))
 );
-
+//*/
 
 ///////////////////////////////////
 //CODE
@@ -166,37 +168,8 @@ float closestBoxIntersection(ray theRay, box theBox)
     //dists[0].x is one of the x plane's distance. dists[1].x is the other's.
     vec3 dists[2];
     
-    bool inside = true;
-    for(int i = 0; i < 3; i+=1)
-    {
-        if(theRay.orig[i] < theBox.min[i] || theRay.orig[i] > theBox.max[i])
-        {
-            inside = false;
-        }
-    }
-    
-    for(int i = 0; i < 3; i+=1)
-    {
-        //if direction is not paralell to the planes
-        if(0 != theRay.dir[i])
-        {
-            dists[0][i] = (theBox.min[i] - theRay.orig[i]) / theRay.dir[i];
-            dists[1][i] = (theBox.max[i] - theRay.orig[i]) / theRay.dir[i];
-        }
-        else
-        {
-            if(inside)
-            {
-                dists[0][i] = MAX_DISTANCE;
-                dists[1][i] = -MAX_DISTANCE;
-            }
-            else
-            {
-                dists[0][i] = MAX_DISTANCE;
-                dists[1][i] = MAX_DISTANCE;
-            }
-        }
-    }
+    dists[0] = (theBox.min - theRay.orig) / theRay.dir;
+    dists[1] = (theBox.max - theRay.orig) / theRay.dir;
     
     //
     float tmin = max(max(min(dists[0].x, dists[1].x), min(dists[0].y, dists[1].y)), min(dists[0].z, dists[1].z));
@@ -215,6 +188,9 @@ float closestBoxIntersection(ray theRay, box theBox)
 float closestSphereIntersection(ray theRay, sphere theSphere)
 {
     // 0 = a*(t^2) + b*t + c where t is the distance from the ray origin on the ray
+    
+    //if the ray is facing "away" from the sphere
+    //if(dot(theRay.dir, normalize(theSphere.pos-theRay.orig)) < 0) return -1.f;
     
     float a = dot(theRay.dir, theRay.dir);
     float b = 2.f * dot(theRay.orig - theSphere.pos, theRay.dir);
@@ -361,15 +337,14 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             //...now check
             if(notInShadow)
             {
-                //                        \/  to eye  \/
-                vec3 halfway = normalize((-1*thisRay.dir) + toLight);
-                
                 if(material & MAT_DIFFUSE)
                 {
                     color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
                 }
                 if(material & MAT_SPECULAR)
                 {
+                    //                        \/  to eye  \/
+                    vec3 halfway = normalize((-1*thisRay.dir) + toLight);
                     color += colorIntensity * Lights[i].color * specCol * pow(max(0.0f, dot(halfway, normal)), 150);
                 }
                 if(material & MAT_CHECKER)
@@ -424,7 +399,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
 
 void main()
 {
-    const int maxReflectionCount = 6; //effects performance!
+    const int maxLightBounces = 6; //effects performance!
     
     #if (0 == DRUNK)
     ray thisRay = ray(eyePos, normalize(rayDirFromVer));
@@ -434,7 +409,7 @@ void main()
     vec3 color = vec3(0, 0, 0);
     vec3 colorIntensity = vec3(1, 1, 1);
     bool rayHit = true;
-    for(int i = 0; rayHit && i < maxReflectionCount; i+=1)
+    for(int i = 0; rayHit && i < maxLightBounces; i+=1)
     {
         rayHit = traceRay(thisRay, color, colorIntensity);
     }
