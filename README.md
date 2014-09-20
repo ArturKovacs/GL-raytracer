@@ -9,6 +9,11 @@ This software depends on:
 - glm ( http://glm.g-truc.net )
 - OpenGL 3.1 ( http://www.opengl.org ) (should be installed by default)
 
+Latest binary download available on the github releases page. (Binary is for windows only.
+If you are learning linux, and want to build on a linux distribution, i strognly recommend you to
+download the dependencies from your software manager. After that open a terminal window and change directory
+to where the source files are located. Run "make" in the terminal and a runnable file should
+be created nammed: GL-raytracer)
 
 MOVEMENT:
 You can move with w,a,s,d. Holding SHIFT will make you move faster.
