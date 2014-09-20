@@ -10,15 +10,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <GL/glu.h>
-
-#define GLDEBUG std::cout << (__FILE__) << " at " << (__LINE__) << " : " << gluErrorString(glGetError()) << std::endl;
-
-#define nemsor 0
-#define egysor nemsor
-#define ketsor egysor/2
-#define negysor egysor
-//egysor nemsor
 
 const float PI = glm::pi<float>();
 
@@ -52,7 +43,7 @@ public:
 	const char* get_message()const {return m.c_str();}
 };
 
-void custom_warning(const char* message)
+void custom_warning(std::string message)
 {
 	std::cout << "Warning: " << message << std::endl;
 }
@@ -66,10 +57,12 @@ struct camera
 camera cameraTransform = {glm::vec3(0, 32, 50), -0.3f, 0};
 //camera cameraTransform = {glm::vec3(14, 7, 9), -0.1, PI-0.1};
 
-const float mouseSensitivity = 0.0035f;
+const float mouseSensitivity = 0.003f;
 
 bool mouseControllEnabled = SDL_FALSE;
-float movementSpeed = 10.f;
+const float baseMovementSpeed = 10.f;
+const float fastMovementSpeed = 50.f;
+float currentMovementSpeed = baseMovementSpeed;
 short forwardMovement = 0;
 short leftMovement = 0;
 
@@ -170,7 +163,7 @@ void Init()
 	//Turn on Vsync
 	if(SDL_GL_SetSwapInterval( 1 ) < 0)
 	{
-		std::cout << "Can not turn Vsync ON: " << SDL_GetError() << std::endl;
+		custom_warning(std::string("Can not turn Vsync ON: ") + SDL_GetError());
 	}
 
 	glClearColor( 1.f, 1.f, 1.f, 1.f );
@@ -196,6 +189,11 @@ void Init()
 	glShaderSource(vertexShaderID, 1, vertexShaderToFunction, NULL);
 	glCompileShader(vertexShaderID);
 
+	std::string shaderlog;
+	const char* logEndSeparator = "-end of log----------------------------";
+	getShaderInfoLog(vertexShaderID, shaderlog);
+	std::cout << "Vertex shader log:\n" << shaderlog << std::endl << logEndSeparator << std::endl;
+
 	GLint success = GL_FALSE;
 	glGetShaderiv(vertexShaderID, GL_COMPILE_STATUS, &success);
 	if(GL_TRUE != success)
@@ -220,13 +218,14 @@ void Init()
 	glShaderSource(fragmentShaderID, 1, fragmentShaderToFunction, NULL);
 	glCompileShader(fragmentShaderID);
 
+	getShaderInfoLog(fragmentShaderID, shaderlog);
+	std::cout << "Fragment shader log:\n" << shaderlog << std::endl << logEndSeparator << std::endl;
+
 	success = GL_FALSE;
 	glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &success);
 	if(GL_TRUE != success)
 	{
-		std::string log;
-		getShaderInfoLog(fragmentShaderID, log);
-		throw custom_exception(std::string("Error while compiling fragment shader:\n") + log);
+		throw custom_exception(std::string("Error while compiling fragment shader!"));
 	}
 
 	glAttachShader(programID, fragmentShaderID);
@@ -265,6 +264,11 @@ void Init()
 		throw custom_exception("Can not get attribute location for \"VertexWorldPos\"");
 	}
 
+	glDetachShader(programID, vertexShaderID);
+	glDetachShader(programID, fragmentShaderID);
+	glDeleteShader(vertexShaderID);
+	glDeleteShader(fragmentShaderID);
+
 	GLfloat vertexData[vertexDataSize];
 	GenerateVertexData(vertexData);
 
@@ -274,17 +278,21 @@ void Init()
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, vertexDataSize * sizeof(GLfloat), vertexData, GL_STATIC_DRAW);
 
+	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
+	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
+	glEnableVertexAttribArray(sh_NDCpos);
+	glEnableVertexAttribArray(sh_vertexWorldPos);
+
 	glGenBuffers(1, &IBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 4 * sizeof(GLuint), indexData, GL_STATIC_DRAW);
+
+	glUseProgram(programID);
 }
 
 void Cleanup()
 {
 	glDeleteProgram(programID);
-
-	glDeleteShader(vertexShaderID);
-	glDeleteShader(fragmentShaderID);
 
 	SDL_DestroyWindow(window);
 	window = NULL;
@@ -294,8 +302,6 @@ void Cleanup()
 
 void handleKeys(const SDL_KeyboardEvent& keyevent)
 {
-	//short movementSpeed = (KMOD_SHIFT & keyevent.keysym.mod) ? 3 : 1;
-
 	switch(keyevent.keysym.sym)
 	{
 	case SDLK_SPACE:
@@ -328,7 +334,7 @@ void handleKeys(const SDL_KeyboardEvent& keyevent)
 
 	case SDLK_LSHIFT:
 	case SDLK_RSHIFT:
-		movementSpeed = (SDL_KEYDOWN == keyevent.type) ? 50.f : 10.f;
+		currentMovementSpeed = (SDL_KEYDOWN == keyevent.type) ? fastMovementSpeed : baseMovementSpeed;
 		break;
 
 	default:
@@ -362,38 +368,29 @@ void update()
 	glm::vec3 left = glm::vec3(-1.0f, 0.0f, 0.0f);
 	left = glm::vec3(rotationMatrix * glm::vec4(left, 1.0f));
 
-	cameraTransform.pos += forward * float(forwardMovement) * deltaTime * movementSpeed;
-	cameraTransform.pos += left * float(leftMovement) * deltaTime * movementSpeed;
+	cameraTransform.pos += forward * float(forwardMovement) * deltaTime * currentMovementSpeed;
+	cameraTransform.pos += left * float(leftMovement) * deltaTime * currentMovementSpeed;
 
 	glm::mat4 camMatrix = glm::translate(glm::mat4(1.0f), cameraTransform.pos);
 	camMatrix = glm::rotate(camMatrix, cameraTransform.roty, glm::vec3(0.0f, 1.0f, 0.0f));
 	camMatrix = glm::rotate(camMatrix, cameraTransform.rotx, glm::vec3(1.0f, 0.0f, 0.0f));
 
-
-	glUseProgram( programID );
+	//glUseProgram( programID );
 	glUniform1f(sh_time, currTime);
 	glUniformMatrix4fv(sh_cameraTransform, 1, GL_FALSE, glm::value_ptr(camMatrix));
-	glUseProgram( NULL );
+	//glUseProgram( NULL );
 }
 
 void render()
-{	
-	glUseProgram(programID);
-
-	glEnableVertexAttribArray(sh_NDCpos);
-	glEnableVertexAttribArray(sh_vertexWorldPos);
+{
+	//the shader program have been set at the end of the initialization
+	//glUseProgram(programID);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
-	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
-
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_INT, NULL);
 
-	glDisableVertexAttribArray(sh_vertexWorldPos);
-	glDisableVertexAttribArray(sh_NDCpos);
-
-	glUseProgram(NULL);
+	//glUseProgram(NULL);
 }
 
 bool loadStringFromFile(const char* filename, std::string& result)

@@ -5,10 +5,9 @@ GL raytracer is a small project that aims to achieve realtime raytracing.
 
 This software depends on:
 - SDL2 ( http://libsdl.org/index.php )
-- OpenGL 3.1 ( http://www.opengl.org )
-- glu ( http://www.opengl.org/resources/libraries/ )
 - glew ( http://glew.sourceforge.net )
 - glm ( http://glm.g-truc.net )
+- OpenGL 3.1 ( http://www.opengl.org ) (should be installed by default)
 
 
 MOVEMENT:

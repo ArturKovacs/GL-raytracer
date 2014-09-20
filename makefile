@@ -1,3 +1,3 @@
 
 all:
-	g++ main.cpp -O3 -lGL -lGLU -lGLEW -lSDL2
+	g++ main.cpp -O3 -lGL -lGLEW -lSDL2

@@ -31,7 +31,7 @@ uniform float time;
 #define OBJ_SPHERE  0
 #define OBJ_BOX     1
 
-const float EPS = 0.006f;
+const float EPSILON = 0.006f;
 const float PI = 3.14159f;
 
 vec3 custom_transform(vec3 seed)
@@ -39,6 +39,10 @@ vec3 custom_transform(vec3 seed)
     return cos(seed + vec3(length(seed)));
     //return cos(seed + vec3(length(seed), seed.z, 3*sin(seed.x)));
 }
+
+///////////////////////////////////////////////
+//OBJECTS
+///////////////////////////////////////////////
 
 struct sphere
 {
@@ -73,16 +77,33 @@ struct light
     vec3 color;
 };
 
-///////////////////////////////////
+///////////////////////////////////////////////
 //SCENES
-///////////////////////////////////
+///////////////////////////////////////////////
+
+//standard ray tracing
+//*
+sphere Spheres[] = sphere[](
+    sphere(vec3(-24, 10, 0), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.5, 0.1, 0.1), vec3(0), vec3(0.5, 0.4, 0.4)),
+    sphere(vec3(0, 10, -10), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1, 0.5, 0.1), vec3(0), vec3(0.4, 0.5, 0.4)),
+    sphere(vec3(24, 10, 0), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1, 0.1, 0.5), vec3(0), vec3(0.4, 0.4, 0.5))
+);
+
+box Boxes[] = box[](
+    box(vec3(-100, -2, -100), vec3(100, 0, 100), MAT_CHECKER | MAT_REFLECTIVE, vec3(0.5), vec3(0), vec3(0.5))
+);
+
+light Lights[1] = light[1](
+    light(vec3(0, 50.0, 15), vec3(1.5))
+);
+//*/
 
 //Glass chair
 /*
 sphere Spheres[] = sphere[](
-    sphere(vec3(0, 0, 0), 300, MAT_DIFFUSE, vec3(0.2, 0.3, 0.9), vec3(0), vec3(0.9)),
-    sphere(vec3(20*cos(time), 10, 20*sin(time)), 10, MAT_CHECKER, vec3(0.3, 0.8, 0.4), vec3(0), vec3(0.9)),
-    sphere(vec3(20*cos(time+PI), 10, 20*sin(time+PI)), 10, MAT_CHECKER, vec3(0.9, 0.2, 0.2), vec3(0), vec3(0.9))
+    sphere(vec3(0, 0, 0), 300, MAT_DIFFUSE, vec3(0.4, 0.5, 0.9), vec3(0), vec3(0.9)),
+    sphere(vec3(20*cos(time), 10, 20*sin(time)), 10, MAT_CRAZY, vec3(0.3, 0.8, 0.4), vec3(0), vec3(0.9)),
+    sphere(vec3(20*cos(time+PI), 10, 20*sin(time+PI)), 10, MAT_CRAZY, vec3(0.9, 0.2, 0.2), vec3(0), vec3(0.9))
 );
 
 box Boxes[] = box[](
@@ -93,7 +114,7 @@ box Boxes[] = box[](
     box(vec3(-6, 8, -4), vec3(6, 10, 6), MAT_REFRACT, vec3(0), vec3(0.9), vec3(0.9, 0.95, 0.95)),
     box(vec3(-4, 16, -6), vec3(4, 20, -4), MAT_REFRACT, vec3(0), vec3(0.9), vec3(0.9, 0.95, 0.95)),
 
-    box(vec3(-200, -2, -200), vec3(200, 0, 200), MAT_CRAZY, vec3(.9), vec3(0), vec3(0.9, 0.95, 0.95))
+    box(vec3(-200, -2, -200), vec3(200, 0, 200), MAT_CHECKER, vec3(.9), vec3(0), vec3(0.9, 0.95, 0.95))
 );
 
 light Lights[1] = light[1](
@@ -101,29 +122,10 @@ light Lights[1] = light[1](
 );
 //*/
 
-//Mirror room
+//Box
 /*
 sphere Spheres[] = sphere[](
-    sphere(vec3(2, 2.5, 1), 2.5, MAT_DIFFUSE, vec3(0.1, 0.2, 0.9), vec3(0.95, 0.95, 0.95), vec3(0.8, 0.8, 1.0)),
-    sphere(vec3(-5, 3, -4), 3, MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95, 0.95, 0.95), vec3(0.8, 0.8, 0.8)),
-    sphere(vec3(8, 4, -10), 4, MAT_DIFFUSE, vec3(0.8, 0.1, 0.3), vec3(0.95, 0.95, 0.95), vec3(0.8, 0.8, 0.8))
-);
-
-box Boxes[] = box[](
-    //box(vec3(-8, 0, -7), vec3(-2, 6, -1), MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-    //box(vec3(4, 0, -14), vec3(12, 8, -6), MAT_DIFFUSE, vec3(0.8, 0.1, 0.3), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-    box(vec3(-35, 0, -70), vec3(35, 50, 70), MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1), vec3(0), vec3(0.8))
-);
-
-light Lights[1] = light[1](
-    light(vec3(9.0, 18.0, -8.0), vec3(1.1))
-);
-//*/
-
-//Box
-//*
-sphere Spheres[] = sphere[](
-    sphere(vec3(-20, 8, 10), 8, MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.8, 0.8, 1.0)),
+    sphere(vec3(-20, 8, 10), 8, MAT_DIFFUSE | MAT_BUMPY, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.8, 0.8, 1.0)),
     sphere(vec3(10, 16, 5), 5, MAT_DIFFUSE, vec3(0.3, 0.9, 0.2), vec3(0.95), vec3(0.8, 0.8, 1.0)),
     sphere(vec3(-12, 16, -10), 10, MAT_REFRACT | MAT_SPECULAR, vec3(0.0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
     sphere(vec3(15, 11, -32), 11, MAT_REFLECTIVE | MAT_SPECULAR, vec3(0.0), vec3(0.95), vec3(0.9))
@@ -158,9 +160,9 @@ light Lights[] = light[](
 );
 //*/
 
-///////////////////////////////////
+///////////////////////////////////////////////
 //CODE
-///////////////////////////////////
+///////////////////////////////////////////////
 
 float closestBoxIntersection(ray theRay, box theBox)
 {
@@ -168,10 +170,11 @@ float closestBoxIntersection(ray theRay, box theBox)
     //dists[0].x is one of the x plane's distance. dists[1].x is the other's.
     vec3 dists[2];
     
-    dists[0] = (theBox.min - theRay.orig) / theRay.dir;
-    dists[1] = (theBox.max - theRay.orig) / theRay.dir;
+    vec3 oneOverDir = vec3(1) / theRay.dir;
     
-    //
+    dists[0] = (theBox.min - theRay.orig) * oneOverDir;
+    dists[1] = (theBox.max - theRay.orig) * oneOverDir;
+    
     float tmin = max(max(min(dists[0].x, dists[1].x), min(dists[0].y, dists[1].y)), min(dists[0].z, dists[1].z));
     float tmax = min(min(max(dists[0].x, dists[1].x), max(dists[0].y, dists[1].y)), max(dists[0].z, dists[1].z));
     
@@ -244,10 +247,12 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
         }
     }
     
+    //if the ray hit any object
     if(-1 != closestObjID)
     {
         //find exact point
         vec3 point = (thisRay.dir * closest) + thisRay.orig;
+
         //calculate normal and get other properties
         vec3 normal;
         int material;
@@ -269,11 +274,11 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             specCol = Boxes[closestObjID].specCol;
             reflCol = Boxes[closestObjID].reflCol;
             normal = vec3(0, 0, 0);
-            if(point.x <= Boxes[closestObjID].min.x + EPS) normal.x = -1;
-            else if(point.x >= Boxes[closestObjID].max.x - EPS) normal.x = 1;
-            else if(point.y <= Boxes[closestObjID].min.y + EPS) normal.y = -1;
-            else if(point.y >= Boxes[closestObjID].max.y - EPS) normal.y = 1;
-            else if(point.z <= Boxes[closestObjID].min.z + EPS) normal.z = -1;
+            if(point.x <= Boxes[closestObjID].min.x + EPSILON) normal.x = -1;
+            else if(point.x >= Boxes[closestObjID].max.x - EPSILON) normal.x = 1;
+            else if(point.y <= Boxes[closestObjID].min.y + EPSILON) normal.y = -1;
+            else if(point.y >= Boxes[closestObjID].max.y - EPSILON) normal.y = 1;
+            else if(point.z <= Boxes[closestObjID].min.z + EPSILON) normal.z = -1;
             else normal.z = 1;
             break;
         default: break;
@@ -295,11 +300,12 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
         color += colorIntensity * diffCol * 0.15;
         
         vec3 toLight;
+        //for all the lights
         for(int i = 0; i < Lights.length(); i+=1)
         {
             toLight = normalize(Lights[i].pos - point);
             
-            //shadows...
+            //calculate if point is in shadow for the current light...
             bool notInShadow = true;
             #if (0 != ENABLE_SHADOWS)
             ray rayToLight = ray(point, toLight);
@@ -313,9 +319,9 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
                 {
                     hitDist = closestSphereIntersection(rayToLight, Spheres[j]);
                     //only check positive direction (also if hitDist is very close to 0 that probably means that
-                    //the ray hits the object itself so we need to choose a slightly bigger value: EPSILON (EPS)) &&
+                    //the ray hits the object itself so we need to choose a slightly bigger value: EPSILON &&
                     //the object that we hit should be between the light and the surface point. Otherwise its not blocking the light
-                    if(EPS < hitDist && pointLightDist > hitDist)
+                    if(EPSILON < hitDist && pointLightDist > hitDist)
                     {
                         //its in shadow
                         notInShadow = false;
@@ -327,7 +333,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
                 if(!(j == closestObjID && OBJ_BOX == closestObjType) && (0 == (Boxes[j].material & MAT_REFRACT)))
                 {
                     hitDist = closestBoxIntersection(rayToLight, Boxes[j]);
-                    if(EPS < hitDist && pointLightDist > hitDist)
+                    if(EPSILON < hitDist && pointLightDist > hitDist)
                     {
                         notInShadow = false;
                     }
@@ -337,6 +343,8 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             //...now check
             if(notInShadow)
             {
+                //if not in shadow, add up all the different colors that come from the different
+                //material properties of this object. (for the current light)
                 if(material & MAT_DIFFUSE)
                 {
                     color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
@@ -364,26 +372,31 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
                 }
             }
         }
+        //finished calculating illumination that comes directly from the lights
         
+        //now check if we have to trace a reflected, or a refracted light ray
         if(material & MAT_REFLECTIVE)
         {
+            //the color that comes from the reflected direction, should be modulated by this object's color
             colorIntensity *= reflCol;
             
-            //                     | to guarantee that this ray wont hit its origin
-            thisRay = ray(point + (EPS * reflect(thisRay.dir, normal)), reflect(thisRay.dir, normal));
+            //the new ray that should be traced. Note that we have to put the new ray's origin
+            //a little bit away from the surface to prevent it from hitting its origin
+            thisRay = ray(point + (EPSILON * reflect(thisRay.dir, normal)), reflect(thisRay.dir, normal));
             
             return true;
         }
         else if(material & MAT_REFRACT)
         {
+            //same things as above
             colorIntensity *= reflCol;
             
-            //                        | to guarantee that this ray wont hit its origin
-            ray newRay = ray(point + (EPS * refract(thisRay.dir, normal, IOR_curr)), refract(thisRay.dir, normal, IOR_curr));
+            ray newRay = ray(point + (EPSILON * refract(thisRay.dir, normal, IOR_curr)), refract(thisRay.dir, normal, IOR_curr));
             
+            //if its a total internal reflection...
             if(vec3(0) == newRay.dir)
             {
-                thisRay = ray(point + (EPS * reflect(thisRay.dir, normal)), reflect(thisRay.dir, normal));
+                thisRay = ray(point + (EPSILON * reflect(thisRay.dir, normal)), reflect(thisRay.dir, normal));
             }
             else
             {
@@ -392,10 +405,18 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             
             return true;
         }
+        else
+        {
+            return false;
+        }
     }
     
     return false;
 }
+
+///////////////////////////////////////////////
+//MAIN
+///////////////////////////////////////////////
 
 void main()
 {
