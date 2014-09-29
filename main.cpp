@@ -11,30 +11,6 @@
 #include <fstream>
 #include <string>
 
-const float PI = glm::pi<float>();
-
-const int INIT_WINDOW_WIDTH = 720;
-const int INIT_WINDOW_HEIGHT = 480;
-
-int curr_screen_width = INIT_WINDOW_WIDTH;
-int curr_screen_height = INIT_WINDOW_HEIGHT;
-
-const int vertexDataSize = 4*5;
-
-void GenerateVertexData(GLfloat outputData[vertexDataSize]);
-
-void Init(); //thorws exceptions
-void Cleanup();
-
-void handleKeys(const SDL_KeyboardEvent& keyevent);
-void handleMouseMotion(const SDL_MouseMotionEvent& motion);
-void update();
-void render();
-
-bool loadStringFromFile(const char* filename, std::string& result);
-bool getShaderInfoLog(GLuint shader, std::string& log);
-bool getProgramInfoLog(GLuint program, std::string& log);
-
 class custom_exception
 {
 public:
@@ -56,6 +32,17 @@ struct camera
 };
 camera cameraTransform = {glm::vec3(0, 32, 50), -0.3f, 0};
 //camera cameraTransform = {glm::vec3(14, 7, 9), -0.1, PI-0.1};
+
+const float PI = glm::pi<float>();
+
+const int INIT_WINDOW_WIDTH = 720;
+const int INIT_WINDOW_HEIGHT = 480;
+
+int curr_screen_width = INIT_WINDOW_WIDTH;
+int curr_screen_height = INIT_WINDOW_HEIGHT;
+
+//4 vertices * (2 NDC coordinate per vertex + 3 world coordinates per vertex)
+const int vertexDataSize = 4*(2+3);
 
 const float mouseSensitivity = 0.003f;
 
@@ -82,6 +69,74 @@ GLint sh_vertexWorldPos = -1;
 GLuint VBO = 0;
 GLuint IBO = 0;
 
+bool loadStringFromFile(const char* filename, std::string& result)
+{
+	std::ifstream file(filename);
+
+	if(!file.is_open())
+	{
+		return false;
+	}
+
+	char c;
+
+	while(file.get(c))
+	{
+		result += c;
+	}
+
+	if(file.eof())
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool getProgramInfoLog(GLuint program, std::string& log)
+{
+	if( glIsProgram( program ) )
+	{
+		int requiredLength = 0;
+		glGetProgramiv(program, GL_INFO_LOG_LENGTH, &requiredLength);
+		log.resize(requiredLength);
+		if(0 == requiredLength)
+		{
+			return true;
+		}
+
+		glGetProgramInfoLog(program, requiredLength, NULL, &(log[0]));
+	}
+	else
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool getShaderInfoLog(GLuint shader, std::string& log)
+{
+	if(glIsShader(shader))
+	{
+		int requiredLength = 0;
+		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &requiredLength);
+		log.resize(requiredLength);
+		if(0 == requiredLength)
+		{
+			return true;
+		}
+
+		glGetShaderInfoLog(shader, requiredLength, NULL, &(log[0]));
+	}
+	else
+	{
+		return false;
+	}
+
+	return true;
+}
+
 void GenerateVertexData(GLfloat outputData[vertexDataSize])
 {
 	GLfloat vertexData[] =
@@ -101,27 +156,27 @@ void GenerateVertexData(GLfloat outputData[vertexDataSize])
 		0,		0,		-2.0f,
 	};
 
+	float ratioForX;
+	float ratioForY;
+
 	if(curr_screen_width > curr_screen_height)
 	{
-		float ratio = float(curr_screen_width) / curr_screen_height;
-		for(int i = 0; i < vertexDataSize; i+=4)
-		{
-			vertexData[i+2] = vertexData[i] * ratio;
-			i+=1;
-			vertexData[i+2] = vertexData[i];
-		}
+		ratioForX = float(curr_screen_width) / curr_screen_height;
+		ratioForY = 1.f;
 	}
 	else
 	{
-		float ratio = float(curr_screen_height) / curr_screen_width;
-		for(int i = 0; i < vertexDataSize; i+=4)
-		{
-			vertexData[i+2] = vertexData[i];
-			i+=1;
-			vertexData[i+2] = vertexData[i] * ratio;
-		}
+		ratioForX = 1.f;
+		ratioForY = float(curr_screen_height) / curr_screen_width;
 	}
 
+	for(int i = 0; i < vertexDataSize; i+=4)
+	{
+		vertexData[i+2] = vertexData[i] * ratioForX;
+		i+=1;
+		vertexData[i+2] = vertexData[i] * ratioForY;
+	}
+	
 	//copy created data to the output
 	for(int i = 0; i < vertexDataSize; i+=1)
 	{
@@ -132,7 +187,7 @@ void GenerateVertexData(GLfloat outputData[vertexDataSize])
 //throws exeption
 void Init()
 {
-	if(SDL_Init( SDL_INIT_VIDEO ) < 0)
+	if(SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		throw custom_exception((std::string("Can not init SDL: ") + SDL_GetError()));
 	}
@@ -154,18 +209,20 @@ void Init()
 	}
 
 	GLenum error_code = glewInit();
-	//GLDEBUG
 	if(GLEW_OK != error_code)
 	{
 		throw custom_exception((std::string("Can not init GLEW: ") + (const char*)glewGetErrorString(error_code)));
 	}
 
-	//Turn on Vsync
-	if(SDL_GL_SetSwapInterval( 1 ) < 0)
+	//Turn on Vsync with late swap tearing, if supported
+	if(SDL_GL_SetSwapInterval(-1) < 0)
 	{
-		custom_warning(std::string("Can not turn Vsync ON: ") + SDL_GetError());
+		custom_warning(std::string("Can not turn Vsync ON with late swap tearing. Using immediate updates (Vsync OFF) instead.\n") + SDL_GetError());
+		SDL_GL_SetSwapInterval(0);
 	}
 
+	//note that glClearColor color does not have any effect, because we always draw a quad that completely covers the screen
+	//(the background color is determined, by the fragment shader)
 	glClearColor( 1.f, 1.f, 1.f, 1.f );
 
 	//////////////////////////////////////
@@ -178,10 +235,10 @@ void Init()
 
 	std::string vertexShaderSource;
 	const GLchar *vertexShaderToFunction[1];
-	const char* vertex_shader_filename = "vertex.glsl";
-	if(!loadStringFromFile(vertex_shader_filename, vertexShaderSource))
+	const char* vertexShaderFilename = "vertex.glsl";
+	if(!loadStringFromFile(vertexShaderFilename, vertexShaderSource))
 	{
-		throw custom_exception(std::string("Can not load file: ") + vertex_shader_filename);
+		throw custom_exception(std::string("Can not load file: ") + vertexShaderFilename);
 	}
 
 	vertexShaderToFunction[0] = vertexShaderSource.c_str();
@@ -198,9 +255,7 @@ void Init()
 	glGetShaderiv(vertexShaderID, GL_COMPILE_STATUS, &success);
 	if(GL_TRUE != success)
 	{
-		std::string log;
-		getShaderInfoLog(vertexShaderID, log);
-		throw custom_exception(std::string("Error while compiling vertex shader:\n") + log);
+		throw custom_exception(std::string("Error while compiling vertex shader!"));
 	}
 
 	glAttachShader(programID, vertexShaderID);
@@ -208,10 +263,10 @@ void Init()
 
 	std::string fragmentShaderSource;
 	const GLchar *fragmentShaderToFunction[1];
-	const char* fragment_shader_filename = "fragment.glsl";
-	if(!loadStringFromFile(fragment_shader_filename, fragmentShaderSource))
+	const char* fragmentShaderFilename = "fragment.glsl";
+	if(!loadStringFromFile(fragmentShaderFilename, fragmentShaderSource))
 	{
-		throw custom_exception(std::string("Can not load file: ") + fragment_shader_filename);
+		throw custom_exception(std::string("Can not load file: ") + fragmentShaderFilename);
 	}
 
 	fragmentShaderToFunction[0] = fragmentShaderSource.c_str();
@@ -353,7 +408,7 @@ void handleMouseMotion(const SDL_MouseMotionEvent& motion)
 	}
 }
 
-void update()
+void Update()
 {
 	const double currTime = SDL_GetTicks() / 1000.0;
 	const float deltaTime = currTime - lastUpdateTime;
@@ -381,84 +436,16 @@ void update()
 	//glUseProgram( NULL );
 }
 
-void render()
+void Render()
 {
-	//the shader program have been set at the end of the initialization
+	//everything have been set at the end of the initialization
 	//glUseProgram(programID);
 
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+	//glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_INT, NULL);
 
 	//glUseProgram(NULL);
-}
-
-bool loadStringFromFile(const char* filename, std::string& result)
-{
-	std::ifstream file(filename);
-
-	if(!file.is_open())
-	{
-		return false;
-	}
-
-	char c;
-
-	while(file.get(c))
-	{
-		result += c;
-	}
-
-	if(file.eof())
-	{
-		return true;
-	}
-
-	return false;
-}
-
-bool getProgramInfoLog(GLuint program, std::string& log)
-{
-	if( glIsProgram( program ) )
-	{
-		int requiredLength = 0;
-		glGetProgramiv(program, GL_INFO_LOG_LENGTH, &requiredLength);
-		log.resize(requiredLength);
-		if(0 == requiredLength)
-		{
-			return true;
-		}
-
-		glGetProgramInfoLog(program, requiredLength, NULL, &(log[0]));
-	}
-	else
-	{
-		return false;
-	}
-
-	return true;
-}
-
-bool getShaderInfoLog(GLuint shader, std::string& log)
-{
-	if(glIsShader(shader))
-	{
-		int requiredLength = 0;
-		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &requiredLength);
-		log.resize(requiredLength);
-		if(0 == requiredLength)
-		{
-			return true;
-		}
-
-		glGetShaderInfoLog(shader, requiredLength, NULL, &(log[0]));
-	}
-	else
-	{
-		return false;
-	}
-
-	return true;
 }
 
 int main(int argc, char* args[])
@@ -508,8 +495,8 @@ int main(int argc, char* args[])
 				}
 			}
 
-			update();
-			render();
+			Update();
+			Render();
 
 			SDL_GL_SwapWindow(window);
 		}

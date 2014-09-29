@@ -1,8 +1,7 @@
-#version 130
+#version 140
 
 //turn shadows on/off (effects performance quite well)
 #define ENABLE_SHADOWS 1
-
 //turn a realistic drunkenness vision on/off
 #define DRUNK 0
 
@@ -81,7 +80,7 @@ struct light
 //SCENES
 ///////////////////////////////////////////////
 
-//standard ray tracing
+//Standard ray tracing
 //*
 sphere Spheres[] = sphere[](
     sphere(vec3(-24, 10, 0), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.5, 0.1, 0.1), vec3(0), vec3(0.5, 0.4, 0.4)),
@@ -299,8 +298,9 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
         //ambient
         color += colorIntensity * diffCol * 0.15;
         
+        //Calculate diffuse, and specular color coming from the object to this pixel.
+        //Each light effects the object indipendently...
         vec3 toLight;
-        //for all the lights
         for(int i = 0; i < Lights.length(); i+=1)
         {
             toLight = normalize(Lights[i].pos - point);
