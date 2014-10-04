@@ -44,7 +44,7 @@ int curr_screen_height = INIT_WINDOW_HEIGHT;
 //4 vertices * (2 NDC coordinate per vertex + 3 world coordinates per vertex)
 const int vertexDataSize = 4*(2+3);
 
-const float mouseSensitivity = 0.003f;
+const float mouseSensitivity = 0.0017f;
 
 bool mouseControllEnabled = SDL_FALSE;
 const float baseMovementSpeed = 10.f;

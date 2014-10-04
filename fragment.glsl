@@ -12,7 +12,7 @@ const float MAX_DISTANCE = 600.0f;
 
 //Shader input, output
 in vec3 rayDirFromVer;
-in vec3 eyePos;
+flat in vec3 eyePos;
 out vec4 outputColor;
 
 uniform float time;
@@ -290,7 +290,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             IOR_curr = IOR_NUM;
         }
         
-        if(material & MAT_BUMPY)
+        if(bool(material & MAT_BUMPY))
         {
             normal = normalize(normal + 0.1*custom_transform(point));
         }
@@ -300,24 +300,22 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
         
         //Calculate diffuse, and specular color coming from the object to this pixel.
         //Each light effects the object indipendently...
-        vec3 toLight;
         for(int i = 0; i < Lights.length(); i+=1)
         {
-            toLight = normalize(Lights[i].pos - point);
+            vec3 toLight = normalize(Lights[i].pos - point);
             
             //calculate if point is in shadow for the current light...
             bool notInShadow = true;
             #if (0 != ENABLE_SHADOWS)
             ray rayToLight = ray(point, toLight);
             float pointLightDist = length(Lights[i].pos - point);
-            float hitDist;
             for(int j = 0; notInShadow && j < Spheres.length(); j+=1)
             {
                 //do not check shadows on self (this is ok for convex objects, but not for concave ones)
                 //and refractive materials don't cast shadows
                 if(!(j == closestObjID && OBJ_SPHERE == closestObjType) && (0 == (Spheres[j].material & MAT_REFRACT)))
                 {
-                    hitDist = closestSphereIntersection(rayToLight, Spheres[j]);
+                    float hitDist = closestSphereIntersection(rayToLight, Spheres[j]);
                     //only check positive direction (also if hitDist is very close to 0 that probably means that
                     //the ray hits the object itself so we need to choose a slightly bigger value: EPSILON &&
                     //the object that we hit should be between the light and the surface point. Otherwise its not blocking the light
@@ -332,7 +330,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             {
                 if(!(j == closestObjID && OBJ_BOX == closestObjType) && (0 == (Boxes[j].material & MAT_REFRACT)))
                 {
-                    hitDist = closestBoxIntersection(rayToLight, Boxes[j]);
+                    float hitDist = closestBoxIntersection(rayToLight, Boxes[j]);
                     if(EPSILON < hitDist && pointLightDist > hitDist)
                     {
                         notInShadow = false;
@@ -345,17 +343,17 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             {
                 //if not in shadow, add up all the different colors that come from the different
                 //material properties of this object. (for the current light)
-                if(material & MAT_DIFFUSE)
+                if(bool(material & MAT_DIFFUSE))
                 {
                     color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
                 }
-                if(material & MAT_SPECULAR)
+                if(bool(material & MAT_SPECULAR))
                 {
                     //                        \/  to eye  \/
                     vec3 halfway = normalize((-1*thisRay.dir) + toLight);
                     color += colorIntensity * Lights[i].color * specCol * pow(max(0.0f, dot(halfway, normal)), 150);
                 }
-                if(material & MAT_CHECKER)
+                if(bool(material & MAT_CHECKER))
                 {
                     //choose a value that has a lower chance to meet the side of a box
                     //(if a boxs side is on the edge its going to have a noisy texture caused by the floating point incorrections)
@@ -366,7 +364,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
                         color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
                     }
                 }
-                if(material & MAT_CRAZY)
+                if(bool(material & MAT_CRAZY))
                 {
                     color += abs(custom_transform(point*0.2)*0.9) * colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
                 }
@@ -375,7 +373,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
         //finished calculating illumination that comes directly from the lights
         
         //now check if we have to trace a reflected, or a refracted light ray
-        if(material & MAT_REFLECTIVE)
+        if(bool(material & MAT_REFLECTIVE))
         {
             //the color that comes from the reflected direction, should be modulated by this object's color
             colorIntensity *= reflCol;
@@ -386,7 +384,7 @@ bool traceRay(inout ray thisRay, out vec3 color, inout vec3 colorIntensity)
             
             return true;
         }
-        else if(material & MAT_REFRACT)
+        else if(bool(material & MAT_REFRACT))
         {
             //same things as above
             colorIntensity *= reflCol;
