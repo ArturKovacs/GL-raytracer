@@ -14,6 +14,9 @@ Latest binary download available on the github [releases](https://github.com/Art
 I strognly recommend you to download the dependencies from your software manager. For detailed instructions
 please go to [How to make it work on linux](https://github.com/ArturKovacs/GL-raytracer/wiki/How-to-make-it-work-on-linux) )
 
+Please note that the program is mainly tested with proprietary AMD display driver and 
+(according to a former check) it won't work with open-source driver on an AMD GPU.
+
 ### Movement ###
 You can move with w,a,s,d. Holding SHIFT will make you move faster.
 Pressing SPACE will capture the mouse.
@@ -21,6 +24,9 @@ You can look around with the mouse while it is captured.
 Pressing SPACE again releases the mouse.
 
 ### Additional tips ###
+Shadows are turned off by default to increase compatibility. However you can enable them by
+setting "ENABLE_SHADOWS" to 1 in the file "fragment.glsl".
+
 Feel free to play with fragment.glsl and vertex.glsl:
 The core of the raytracer is in fragment.glsl.
 However there are some properties that can be changed in vertex.glsl (eg camera field of view).

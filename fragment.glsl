@@ -1,7 +1,7 @@
 #version 140
 
 //turn shadows on/off (affects performance quite well)
-#define ENABLE_SHADOWS 1
+#define ENABLE_SHADOWS 0
 //turn a realistic drunkenness vision on/off
 #define DRUNK 0
 
