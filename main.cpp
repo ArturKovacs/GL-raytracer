@@ -275,9 +275,9 @@ void Init()
 		throw custom_exception(std::string("Error while linking program:\n") + log);
 	}
 	
-	sh_time = glGetUniformLocation(programID, "time");
+	sh_time = glGetUniformLocation(programID, "g_time");
 	if(-1 == sh_time) {
-		custom_warning("Can not get uniform location for \"time\"");
+		custom_warning("Can not get uniform location for \"g_time\"");
 	}
 	
 	sh_cameraTransform = glGetUniformLocation(programID, "cameraTransform");

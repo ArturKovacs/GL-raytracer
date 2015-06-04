@@ -6,7 +6,8 @@
 #define DRUNK 0
 
 //index of refraction
-const float IOR_NUM = 1.52f;
+//const float IOR_NUM = 1.52f;
+const float IOR_NUM = 1.1f;
 
 const float MAX_DISTANCE = 600.0f;
 
@@ -15,10 +16,10 @@ in vec3 rayDirFromVer;
 flat in vec3 eyePos;
 out vec4 outputColor;
 
-uniform float time;
+uniform float g_time;
 
 ////////////////////////
-//property bit flags
+//obejct property bit flags
 
 //bit flags for different material types
 #define MAT_DIFFUSE     1
@@ -34,12 +35,20 @@ uniform float time;
 
 /////////////////////////
 
+/////////////////////////
+//light property bit flags
+#define LGHT_SPARKLING 1
+
+/////////////////////////
+
 //indentifiers for different object types
 #define OBJ_SPHERE  0
 #define OBJ_BOX     1
 
 const float EPSILON = 0.006f;
 const float PI = 3.14159f;
+
+const float sqrt2 = sqrt(2.f);
 
 ///////////////////////////////////////////////
 //OBJECTS
@@ -76,7 +85,42 @@ struct Light
 {
 	vec3 pos;
 	vec3 color;
+	
+	int properties;
 };
+
+float sparkle_transform(float x) {
+	float tmp = (cos(cos(x)*4+cos(x*2*sqrt2))+1)*0.5;
+	return tmp*tmp;
+}
+
+float myrand(const in float seed) {
+	return fract(cos(seed * 1414.213562))*2 - 1;
+	//return cos(seed * 12345.67);
+	//return cos(seed * PI);
+	//return cos(PI);
+	
+	//return -0.5;
+}
+
+float randomWave(const in vec3 x, const in vec3 timeSeed) {
+	const int randomness = 5;
+	float seed = 0;
+	float result = 0;
+	
+	for (int i = 0; i < randomness; i++) {
+		result += (cos(x.x*myrand(seed+=1)*7+timeSeed.x*myrand(seed+=1)*2) * cos(x.y*myrand(seed+=1)*7+PI*0.25+timeSeed.y*myrand(seed+=1)*2) * cos(x.z*myrand(seed+=1)*7+PI*0.5+timeSeed.z*myrand(seed+=1)*2)) * myrand(seed+=1);
+	}
+	
+	return pow(result, 2);
+}
+
+float sparkle(const in vec3 seed, const in float time) { //0,70710678118654752440084436210485
+	
+	//return sparkle_transform(seed.x+100+time*1.1) * sparkle_transform(seed.y*2.41421356+time) * sparkle_transform(seed.z*sqrt2+200-time)*5;
+	
+	return randomWave(seed, vec3(time*2.2, time*1.8, time*2));
+}
 
 vec3 custom_transform(const in vec3 seed) {
 	return cos(seed + vec3(length(seed))) + sin(seed.zxy*1.41421356);
@@ -85,8 +129,8 @@ vec3 custom_transform(const in vec3 seed) {
 
 Ray wobble(const in Ray ray) {
 	Ray result = ray;
-	result.dir = normalize(ray.dir + 0.03*custom_transform((ray.dir.yzx*(ray.dir.zxy-vec3(3))*1.2 + vec3(time*0.7+2))*3));
-	//result.dir = normalize(ray.dir + 0.02*custom_transform((ray.dir + vec3(time+1))*3));
+	result.dir = normalize(ray.dir + 0.03*custom_transform((ray.dir.yzx*(ray.dir.zxy-vec3(3))*1.2 + vec3(g_time*0.7+2))*3));
+	//result.dir = normalize(ray.dir + 0.02*custom_transform((ray.dir + vec3(g_time+1))*3));
 	return result;
 }
 
@@ -96,30 +140,30 @@ Ray wobble(const in Ray ray) {
 
 //Standard Ray tracing
 /*
-Sphere Spheres[] = Sphere[](
+Sphere spheres[] = Sphere[](
 	Sphere(vec3(-24, 10, 0), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.5, 0.1, 0.1), vec3(0), vec3(0.5, 0.4, 0.4)),
 	Sphere(vec3(0, 10, -10), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1, 0.5, 0.1), vec3(0), vec3(0.4, 0.5, 0.4)),
 	Sphere(vec3(24, 10, 0), 10, MAT_DIFFUSE | MAT_REFLECTIVE, vec3(0.1, 0.1, 0.5), vec3(0), vec3(0.4, 0.4, 0.5))
 );
 
-Box Boxes[] = Box[](
+Box boxes[] = Box[](
 	Box(vec3(-100, -2, -100), vec3(100, 0, 100), MAT_CHECKER | MAT_REFLECTIVE, vec3(0.5), vec3(0), vec3(0.5))
 );
 
-Light Lights[] = Light[](
+Light lights[] = Light[](
 	Light(vec3(0, 50.0, 15), vec3(1.5))
 );
 //*/
 
 //Glass chair
 /*
-Sphere Spheres[] = Sphere[](
+Sphere spheres[] = Sphere[](
 	Sphere(vec3(0, 0, 0), 300, MAT_DIFFUSE, vec3(0.4, 0.5, 0.9), vec3(0), vec3(0.9)),
-	Sphere(vec3(20*cos(time), 10, 20*sin(time)), 10, MAT_CRAZY, vec3(0.3, 0.8, 0.4), vec3(0), vec3(0.9)),
-	Sphere(vec3(20*cos(time+PI), 10, 20*sin(time+PI)), 10, MAT_CRAZY, vec3(0.9, 0.2, 0.2), vec3(0), vec3(0.9))
+	Sphere(vec3(20*cos(g_time), 10, 20*sin(g_time)), 10, MAT_CRAZY, vec3(0.3, 0.8, 0.4), vec3(0), vec3(0.9)),
+	Sphere(vec3(20*cos(g_time+PI), 10, 20*sin(g_time+PI)), 10, MAT_CRAZY, vec3(0.9, 0.2, 0.2), vec3(0), vec3(0.9))
 );
 
-Box Boxes[] = Box[](
+Box boxes[] = Box[](
 	Box(vec3(-6, 0, 4), vec3(-4, 8, 6), MAT_REFRACT, vec3(0), vec3(0.9), vec3(0.9, 0.95, 0.95)),
 	Box(vec3(4, 0, 4), vec3(6, 8, 6), MAT_REFRACT, vec3(0), vec3(0.9), vec3(0.9, 0.95, 0.95)),
 	Box(vec3(4, 0, -6), vec3(6, 20, -4), MAT_REFRACT, vec3(0), vec3(0.9), vec3(0.9, 0.95, 0.95)),
@@ -130,45 +174,48 @@ Box Boxes[] = Box[](
 	Box(vec3(-200, -2, -200), vec3(200, 0, 200), MAT_CHECKER, vec3(.9), vec3(0), vec3(0.9, 0.95, 0.95))
 );
 
-Light Lights[] = Light[](
+Light lights[] = Light[](
 	Light(vec3(0, 100.0, 0), vec3(1.2))
 );
 //*/
 
 //Box
 //*
-Sphere Spheres[] = Sphere[](
-	Sphere(vec3(-20, 8.1, 10), 8, MAT_DIFFUSE | MAT_BUMPY | WOBBLY, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.8, 0.8, 1.0)),
-	Sphere(vec3(10, 16, 5), 5, MAT_DIFFUSE, vec3(0.3, 0.9, 0.2), vec3(0.95), vec3(0.8, 0.8, 1.0)),
-	Sphere(vec3(-12, 16, -10), 10, MAT_REFRACT | MAT_SPECULAR | MAT_BUMPY, vec3(0.0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-	Sphere(vec3(15, 11, -32), 11, MAT_REFLECTIVE | MAT_SPECULAR, vec3(0.0), vec3(0.95), vec3(0.9))
+Sphere spheres[] = Sphere[](
+	Sphere(vec3(-70, 20, 80), 50, MAT_DIFFUSE, vec3(0.8, 0.8, 0.1), vec3(0.95), vec3(0.8, 0.8, 1.0)),
+	Sphere(vec3(30, 16, 20), 5, MAT_DIFFUSE, vec3(0.3, 0.9, 0.2), vec3(0.95), vec3(0.8, 0.8, 1.0)),
+	Sphere(vec3(0, 25, -10), 20, MAT_REFRACT | MAT_SPECULAR | WOBBLY, vec3(0.0), vec3(0.95), vec3(0.2, 0.9, 0.95)),
+	Sphere(vec3(47, 11, -50), 11, MAT_REFLECTIVE | MAT_SPECULAR, vec3(0.0), vec3(0.7), vec3(0.4))
 );
 
-Box Boxes[] = Box[](
+Box boxes[] = Box[](
 	Box(vec3(-25, 0, -48), vec3(-11, 14, -34), MAT_DIFFUSE, vec3(0.1, 0.2, 0.9), vec3(0), vec3(0)),
-	Box(vec3(3, 9, -2), vec3(17, 23, 12), MAT_REFRACT, vec3(0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
-	Box(vec3(-50, 0, -75), vec3(50, 60, 75), MAT_CHECKER, vec3(0.6), vec3(0.95), vec3(0.9))
+	Box(vec3(23, 9, 13), vec3(37, 23, 27), MAT_REFRACT, vec3(0), vec3(0.95), vec3(0.9, 0.95, 0.94)),
+	Box(vec3(-70, 0, -90), vec3(70, 60, 100), MAT_CHECKER, vec3(0.6), vec3(0.95), vec3(0.9))
 );
 
-Light Lights[] = Light[](
-	Light(vec3(0.0, 45, 10.0), vec3(1.2, 1.2, 1.2))
+const vec3 blueGlow = vec3(0.1, 0.6, 0.8);
+
+Light lights[] = Light[](
+	Light(vec3(0, 25, -10), blueGlow, LGHT_SPARKLING),
+	Light(vec3(0.0, 45, 10.0), vec3(0.5, 0.5, 0.5)+blueGlow*0.5, 0)
 );
 //*/
 
 //Snowman
 /*
-Sphere Spheres[] = Sphere[](
+Sphere spheres[] = Sphere[](
 	Sphere(vec3(0, 6, 0), 6.0, MAT_DIFFUSE, vec3(1), vec3(0), vec3(0.9)),
 	Sphere(vec3(0, 15, 0), 4.2, MAT_DIFFUSE, vec3(1), vec3(0), vec3(0.9)),
 	Sphere(vec3(0, 21, 0), 2.5, MAT_DIFFUSE, vec3(1), vec3(0), vec3(0.9))
 );
 
-Box Boxes[] = Box[](
+Box boxes[] = Box[](
 	Box(vec3(-200, -2, -200), vec3(200, 0, 200), MAT_DIFFUSE, vec3(.9), vec3(0), vec3(0.2)),
 	Box(vec3(-8, 0, -8), vec3(8, 25, 8), MAT_REFRACT | MAT_BUMPY, vec3(0), vec3(0), vec3(0.9, 0.95, 0.95))
 );
 
-Light Lights[] = Light[](
+Light lights[] = Light[](
 	Light(vec3(400, 200, 400), vec3(0.7, 0.85, 1))
 );
 //*/
@@ -233,12 +280,12 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 	int closestObjID = -1;
 	int closestObjType;
 	float current;
-	for(int i = 0; i < Spheres.length(); i+=1) {
-		if(bool(Spheres[i].properties & WOBBLY)){
-			current = closestSphereIntersection(wobble(thisRay), Spheres[i]);
+	for(int i = 0; i < spheres.length(); i+=1) {
+		if(bool(spheres[i].properties & WOBBLY)){
+			current = closestSphereIntersection(wobble(thisRay), spheres[i]);
 		}
 		else{
-			current = closestSphereIntersection(thisRay, Spheres[i]);
+			current = closestSphereIntersection(thisRay, spheres[i]);
 		}
 		if(current > 0.0f && current < closest) {
 			closest = current;
@@ -247,12 +294,12 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 		}
 	}
 	
-	for(int i = 0; i < Boxes.length(); i+=1) {
-		if(bool(Boxes[i].properties & WOBBLY)){
-			current = closestBoxIntersection(wobble(thisRay), Boxes[i]);
+	for(int i = 0; i < boxes.length(); i+=1) {
+		if(bool(boxes[i].properties & WOBBLY)){
+			current = closestBoxIntersection(wobble(thisRay), boxes[i]);
 		}
 		else{
-			current = closestBoxIntersection(thisRay, Boxes[i]);
+			current = closestBoxIntersection(thisRay, boxes[i]);
 		}
 		if(current > 0.0f && current < closest) {
 			closest = current;
@@ -274,25 +321,25 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 		vec3 reflCol;
 		switch(closestObjType) {
 		case OBJ_SPHERE:
-			point = (bool(Spheres[closestObjID].properties & WOBBLY) ? wobble(thisRay).dir : thisRay.dir)*closest + thisRay.orig;
-			properties = Spheres[closestObjID].properties;
-			diffCol = Spheres[closestObjID].diffCol;
-			specCol = Spheres[closestObjID].specCol;
-			reflCol = Spheres[closestObjID].reflCol;
-			normal = normalize(point - Spheres[closestObjID].pos);
+			point = (bool(spheres[closestObjID].properties & WOBBLY) ? wobble(thisRay).dir : thisRay.dir)*closest + thisRay.orig;
+			properties = spheres[closestObjID].properties;
+			diffCol = spheres[closestObjID].diffCol;
+			specCol = spheres[closestObjID].specCol;
+			reflCol = spheres[closestObjID].reflCol;
+			normal = normalize(point - spheres[closestObjID].pos);
 			break;
 		case OBJ_BOX:
-			point = (bool(Boxes[closestObjID].properties & WOBBLY) ? wobble(thisRay).dir : thisRay.dir)*closest + thisRay.orig;
-			properties = Boxes[closestObjID].properties;
-			diffCol = Boxes[closestObjID].diffCol;
-			specCol = Boxes[closestObjID].specCol;
-			reflCol = Boxes[closestObjID].reflCol;
+			point = (bool(boxes[closestObjID].properties & WOBBLY) ? wobble(thisRay).dir : thisRay.dir)*closest + thisRay.orig;
+			properties = boxes[closestObjID].properties;
+			diffCol = boxes[closestObjID].diffCol;
+			specCol = boxes[closestObjID].specCol;
+			reflCol = boxes[closestObjID].reflCol;
 			normal = vec3(0, 0, 0);
-			if(point.x <= Boxes[closestObjID].min.x + EPSILON) normal.x = -1;
-			else if(point.x >= Boxes[closestObjID].max.x - EPSILON) normal.x = 1;
-			else if(point.y <= Boxes[closestObjID].min.y + EPSILON) normal.y = -1;
-			else if(point.y >= Boxes[closestObjID].max.y - EPSILON) normal.y = 1;
-			else if(point.z <= Boxes[closestObjID].min.z + EPSILON) normal.z = -1;
+			if(point.x <= boxes[closestObjID].min.x + EPSILON) normal.x = -1;
+			else if(point.x >= boxes[closestObjID].max.x - EPSILON) normal.x = 1;
+			else if(point.y <= boxes[closestObjID].min.y + EPSILON) normal.y = -1;
+			else if(point.y >= boxes[closestObjID].max.y - EPSILON) normal.y = 1;
+			else if(point.z <= boxes[closestObjID].min.z + EPSILON) normal.z = -1;
 			else normal.z = 1;
 			break;
 		default: break;
@@ -313,19 +360,19 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 		
 		//Calculate diffuse, and specular color coming from the object to this pixel.
 		//Each Light affects the object indipendently...
-		for(int i = 0; i < Lights.length(); i+=1) {
-			vec3 toLight = normalize(Lights[i].pos - point);
+		for(int i = 0; i < lights.length(); i+=1) {
+			vec3 toLight = normalize(lights[i].pos - point);
 			
 			//calculate if point is in shadow for the current Light...
 			bool notInShadow = true;
 			#if (0 != ENABLE_SHADOWS)
 			Ray rayToLight = Ray(point, toLight);
-			float pointLightDist = distance(Lights[i].pos, point);
-			for(int j = 0; notInShadow && j < Spheres.length(); j+=1) {
+			float pointLightDist = distance(lights[i].pos, point);
+			for(int j = 0; notInShadow && j < spheres.length(); j+=1) {
 				//do not check shadows on self (this is ok for convex objects, but not for concave ones)
 				//and refractive materials don't cast shadows
-				if(!(j == closestObjID && OBJ_SPHERE == closestObjType) && (0 == (Spheres[j].properties & MAT_REFRACT))) {
-					float hitDist = closestSphereIntersection(rayToLight, Spheres[j]);
+				if(!(j == closestObjID && OBJ_SPHERE == closestObjType) && (0 == (spheres[j].properties & MAT_REFRACT))) {
+					float hitDist = closestSphereIntersection(rayToLight, spheres[j]);
 					
 					//only check positive direction (also if hitDist is very close to 0 that probably means that
 					//the Ray hits the object itself so we need to choose a slightly bigger value: EPSILON &&
@@ -336,9 +383,9 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 					}
 				}
 			}
-			for(int j = 0; notInShadow && j < Boxes.length(); j+=1) {
-				if(!(j == closestObjID && OBJ_BOX == closestObjType) && (0 == (Boxes[j].properties & MAT_REFRACT))) {
-					float hitDist = closestBoxIntersection(rayToLight, Boxes[j]);
+			for(int j = 0; notInShadow && j < boxes.length(); j+=1) {
+				if(!(j == closestObjID && OBJ_BOX == closestObjType) && (0 == (boxes[j].properties & MAT_REFRACT))) {
+					float hitDist = closestBoxIntersection(rayToLight, boxes[j]);
 					if(EPSILON < hitDist && pointLightDist > hitDist) {
 						notInShadow = false;
 					}
@@ -349,13 +396,15 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 			if(notInShadow) {
 				//if not in shadow, add up all the different colors that come from the different
 				//material properties of this object. (for the current Light)
-				if(bool(properties & MAT_DIFFUSE)) {
-					color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
+				if(bool(properties & (MAT_DIFFUSE | MAT_CHECKER))) {
+					vec3 diffRadiance = colorIntensity * lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
+					float isSparkling = step(1, lights[i].properties&LGHT_SPARKLING);
+					color += diffRadiance*(abs(isSparkling*sparkle(toLight*6,g_time))+vec3(1-isSparkling));
 				}
 				if(bool(properties & MAT_SPECULAR)) {
 					//                        \/  to eye  \/
 					vec3 halfway = normalize((-1*thisRay.dir) + toLight);
-					color += colorIntensity * Lights[i].color * specCol * pow(max(0.0f, dot(halfway, normal)), 150);
+					color += colorIntensity * lights[i].color * specCol * pow(max(0.0f, dot(halfway, normal)), 150);
 				}
 				if(bool(properties & MAT_CHECKER)) {
 					//choose a value that has a lower chance to meet the side of a Box
@@ -363,11 +412,11 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 					const float checker_size = 5.3;
 					const float checker_edge = checker_size*0.5;
 					if(mod(point.x, checker_size) < checker_edge ^^ mod(point.z, checker_size) < checker_edge) { 
-						color += colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
+						color -= colorIntensity * lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
 					}
 				}
 				if(bool(properties & MAT_CRAZY)) {
-					color += abs(custom_transform(point*0.2)*0.9) * colorIntensity * Lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
+					color += abs(custom_transform(point*0.2)*0.9) * colorIntensity * lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
 				}
 			}
 		}
@@ -418,7 +467,7 @@ void main() {
 	#if (0 == DRUNK)
 	Ray thisRay = Ray(eyePos, normalize(rayDirFromVer));
 	#else
-	Ray thisRay = Ray(eyePos, normalize(rayDirFromVer + 0.1*custom_transform((rayDirFromVer + vec3(time*0.3))*3)));
+	Ray thisRay = Ray(eyePos, normalize(rayDirFromVer + 0.1*custom_transform((rayDirFromVer + vec3(g_time*0.3))*3)));
 	#endif
 	vec3 color = vec3(0, 0, 0);
 	vec3 colorIntensity = vec3(1, 1, 1);
