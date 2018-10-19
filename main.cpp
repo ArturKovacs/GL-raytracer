@@ -11,6 +11,8 @@
 #include <fstream>
 #include <string>
 
+#include "gl_check_error.hpp"
+
 class custom_exception {
 public:
 	std::string m;
@@ -304,15 +306,18 @@ void Init()
 	GenerateVertexData(vertexData);
 	
 	GLuint indexData[] = { 0, 1, 2, 3 };
-	
+	// https://stackoverflow.com/questions/24643027/opengl-invalid-operation-following-glenablevertexattribarray
+	GLuint vao_handle = 0;
+    glGenVertexArrays(1, &vao_handle);
+    glBindVertexArray(vao_handle);
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, vertexDataSize * sizeof(GLfloat), vertexData, GL_STATIC_DRAW);
 	
-	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
-	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
 	glEnableVertexAttribArray(sh_NDCpos);
 	glEnableVertexAttribArray(sh_vertexWorldPos);
+	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
+	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
 	
 	glGenBuffers(1, &IBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);

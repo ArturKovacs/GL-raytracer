@@ -1,0 +1,3669 @@
+Warning: Can not turn Vsync ON with late swap tearing. Using immediate updates (Vsync OFF) instead.
+Negative swap interval unsupported in this GL
+Vertex shader log:
+
+-end of log----------------------------
+Fragment shader log:
+
+-end of log----------------------------
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
+An internal OpenGL call failed in main.cpp(469).
+Expression:
+   in gameloop
+Error description:
+   GL_INVALID_OPERATION
+   The specified operation is not allowed in the current state.
+
