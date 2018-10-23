@@ -1,4 +1,4 @@
-#version 330
+#version 140
 in vec2 NDCpos;
 in vec3 VertexWorldPos;
 out vec3 rayDirFromVer;
