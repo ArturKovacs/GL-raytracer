@@ -398,7 +398,7 @@ bool traceRay(inout Ray thisRay, out vec3 color, inout vec3 colorIntensity) {
 				//material properties of this object. (for the current Light)
 				if(bool(properties & (MAT_DIFFUSE | MAT_CHECKER))) {
 					vec3 diffRadiance = colorIntensity * lights[i].color * diffCol * max(0.0f, dot(toLight, normal));
-					float isSparkling = step(1, lights[i].properties&LGHT_SPARKLING);
+					float isSparkling = int((lights[i].properties & LGHT_SPARKLING) != 0);
 					color += diffRadiance*(abs(isSparkling*sparkle(toLight*6,g_time))+vec3(1-isSparkling));
 				}
 				if(bool(properties & MAT_SPECULAR)) {
