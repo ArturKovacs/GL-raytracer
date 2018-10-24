@@ -64,6 +64,7 @@ GLint sh_cameraTransform = -1;
 GLint sh_time = -1;
 GLint sh_NDCpos = -1;
 GLint sh_vertexWorldPos = -1;
+GLuint VAO = 0;
 GLuint VBO = 0;
 GLuint IBO = 0;
 
@@ -304,16 +305,18 @@ void Init()
 	GenerateVertexData(vertexData);
 	
 	GLuint indexData[] = { 0, 1, 2, 3 };
-	
+
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, vertexDataSize * sizeof(GLfloat), vertexData, GL_STATIC_DRAW);
-	
-	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
-	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
+
 	glEnableVertexAttribArray(sh_NDCpos);
 	glEnableVertexAttribArray(sh_vertexWorldPos);
-	
+	glVertexAttribPointer(sh_NDCpos, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), NULL );
+	glVertexAttribPointer(sh_vertexWorldPos, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (void*)(2*sizeof(GLfloat)) );
+
 	glGenBuffers(1, &IBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 4 * sizeof(GLuint), indexData, GL_STATIC_DRAW);
@@ -458,10 +461,10 @@ int main(int argc, char* args[])
 					handleMouseMotion(e.motion);
 				}
 			}
-			
+
 			Update();
 			Render();
-			
+
 			SDL_GL_SwapWindow(window);
 		}
 		
