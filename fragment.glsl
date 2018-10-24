@@ -237,7 +237,7 @@ float closestBoxIntersection(const in Ray theRay, const in Box theBox) {
 	float tmin = max(max(min(dists[0].x, dists[1].x), min(dists[0].y, dists[1].y)), min(dists[0].z, dists[1].z));
 	float tmax = min(min(max(dists[0].x, dists[1].x), max(dists[0].y, dists[1].y)), max(dists[0].z, dists[1].z));
 	
-	if(tmin > tmax) return -1;
+	if(tmin > tmax) return -1.f;
 	
 	//if we are inside or facing away
 	if(tmin < 0) return tmax;
